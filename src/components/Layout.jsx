@@ -11,6 +11,7 @@ export default function Layout() {
             behavior: 'smooth'
         });
     }
+    
     return (
         <>
             <div className="layout">

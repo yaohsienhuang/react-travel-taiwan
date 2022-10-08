@@ -6,13 +6,13 @@ export default function Home() {
             <section className="nes-container">
                 <img style={{ maxWidth: "100%", height: "auto" }} src={bg} />
             </section>
-            <section className="nes-container is-dark">
+            <section className="nes-container">
 
                 <section className="message-list">
                     <section className="message -left">
                         <i className="nes-kirby"></i>
                         <div className="nes-balloon from-left is-dark">
-                            <p>台灣有什麼好玩的呀</p>
+                            <p>高雄有什麼好玩的呀</p>
                         </div>
                     </section>
 

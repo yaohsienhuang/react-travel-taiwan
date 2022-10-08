@@ -63,7 +63,7 @@ export default function List() {
             </section>
             <ul id="list" className="info-list">
                 {currentInfoItems().map(item => {
-                    return <InfoItem id={item.Name} key={item.Id} info={item} condition={filter} scroll={scrollV} />
+                    return <InfoItem id={item.Name} key={item.Id} info={item} condition={filter} scroll={scrollV}/>
                 })}
             </ul>
         </>

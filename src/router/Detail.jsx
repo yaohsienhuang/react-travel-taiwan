@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { setHistory,getHistory } from "../common";
+import { setFavorite,getFavorite } from "../common";
 
 function GoogleMapBtn(props) {
     const { Py, Px } = props;
@@ -16,6 +17,8 @@ export default function Detail(props) {
 
     const [info, setInfo] = useState(state.state.data);
     const { Id, Name, Picture1, Picdescribe1, Toldescribe, Add, Tel, Travellinginfo, Opentime, Px, Py, Website } = info;
+    let favoriteList= getFavorite();
+    const [favorite, setFavoriteState] = useState(favoriteList);
     setHistory(Id);
 
     useEffect(() => {
@@ -24,12 +27,18 @@ export default function Detail(props) {
         })
     }, [])
 
+    const changeFavorite=()=>{setFavorite(setFavoriteState,Id);};
 
     return (
         <section className="detail">
             <section className="nes-container is-dark with-title">
                 <p className="title">{Name}</p>
                 <img src={Picture1} alt={Picdescribe1} />
+                <div onClick={() => changeFavorite()}>
+                    {favorite.indexOf(Id)==-1?
+                        <i className="nes-icon is-large is-transparent heart"></i> : <i className="nes-icon is-large heart"></i>
+                    }
+                </div>
                 <div className="lists">
                     <ul className="nes-list lists is-circle">
                         {Tel ? <li>電話: {Tel}</li> : ''}
@@ -45,10 +54,10 @@ export default function Detail(props) {
                 {Travellinginfo ?
                     <p className="nes-balloon from-left nes-pointer info-travel">{Travellinginfo}</p> :''
                 }
-                {(Py && Px) ?
-                    <div>
-                        <GoogleMapBtn Py={Py} Px={Px} />
-                    </div> : ''}
+                    {(Py && Px) ?
+                        <div>
+                            <GoogleMapBtn Py={Py} Px={Px} />
+                        </div> : ''}
 
             </section>
             <div className="back-btn">

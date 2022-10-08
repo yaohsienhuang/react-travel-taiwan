@@ -17,6 +17,9 @@ header{
   background-color: #fff;
   z-index: 999;
 }
+h1{
+  margin: 15px;
+}
 .layout {
   display: flex;
   flex-direction: column;
@@ -177,6 +180,9 @@ section.message-list {
   margin-bottom: 20px;
 }
 
+
+
 .back-btn {
   margin-top: 1rem;
 }
+
