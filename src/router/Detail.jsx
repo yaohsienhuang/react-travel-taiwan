@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { setHistory,getHistory } from "../common";
-import { setFavorite,getFavorite } from "../common";
+import { setRecord,setHistory,getFavorite,getAchieve } from "../common";
 
 function GoogleMapBtn(props) {
     const { Py, Px } = props;
@@ -17,8 +16,10 @@ export default function Detail(props) {
 
     const [info, setInfo] = useState(state.state.data);
     const { Id, Name, Picture1, Picdescribe1, Toldescribe, Add, Tel, Travellinginfo, Opentime, Px, Py, Website } = info;
-    let favoriteList= getFavorite();
-    const [favorite, setFavoriteState] = useState(favoriteList);
+    let favoriteList = getFavorite()
+    let achieveList = getAchieve()
+    const [favorite, setFavorite] = useState(favoriteList);
+    const [achieve, setAchieve] = useState(achieveList);
     setHistory(Id);
 
     useEffect(() => {
@@ -27,18 +28,26 @@ export default function Detail(props) {
         })
     }, [])
 
-    const changeFavorite=()=>{setFavorite(setFavoriteState,Id);};
+    const changeFavorite=()=>{setRecord('favorite',setFavorite,Id)};
+    const changeAchieve=()=>{setRecord('achieve',setAchieve,Id)};
 
     return (
         <section className="detail">
             <section className="nes-container is-dark with-title">
                 <p className="title">{Name}</p>
                 <img src={Picture1} alt={Picdescribe1} />
-                <div onClick={() => changeFavorite()}>
+                <a onClick={() => changeFavorite()}>
+                    <h3>加入最愛</h3>
                     {favorite.indexOf(Id)==-1?
                         <i className="nes-icon is-large is-transparent heart"></i> : <i className="nes-icon is-large heart"></i>
                     }
-                </div>
+                </a>
+                <a onClick={() => changeAchieve('achieve')}>
+                    <h3>加入成就</h3>
+                    {achieve.indexOf(Id)==-1?
+                        <i class="nes-icon is-large star is-transparent"></i> : <i class="nes-icon is-large star"></i>
+                    }
+                </a>
                 <div className="lists">
                     <ul className="nes-list lists is-circle">
                         {Tel ? <li>電話: {Tel}</li> : ''}

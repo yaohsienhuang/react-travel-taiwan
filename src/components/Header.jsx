@@ -6,6 +6,7 @@ export default function Header() {
     let hasHistory = getHistory().length || 0;
     let hasFavorite = getFavorite().length || 0;
 
+
     const backIndex = () => {
         navigate("/");
     }
@@ -24,6 +25,7 @@ export default function Header() {
                         <Link className="nes-btn" to="/list">景點列表</Link>
                         <Link className={hasHistory > 0 ? "nes-btn" : "nes-btn is-disabled"} to="/history">瀏覽紀錄</Link>
                         <Link className={hasFavorite > 0 ? "nes-btn" : "nes-btn is-disabled"} to="/favorite">我的最愛</Link>
+                        <Link className={hasFavorite > 0 ? "nes-btn" : "nes-btn is-disabled"} to="/achieve">我的成就</Link>
                     </nav>
                 </div>
             </div>

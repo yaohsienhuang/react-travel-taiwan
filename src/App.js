@@ -4,6 +4,7 @@ import List from "./router/List";
 import Detail from "./router/Detail";
 import History from "./router/History";
 import Favorite from "./router/Favorite";
+import Achieve from "./router/Achieve";
 import { Routes, Route, Link } from "react-router-dom";
 import './App.css';
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/list" element={<List />} />
           <Route path="/history" element={<History />} />
           <Route path="/favorite" element={<Favorite />} />
+          <Route path="/achieve" element={<Achieve />} />
           <Route path="/info/:id" element={<Detail />} />
         </Route>
     </Routes>

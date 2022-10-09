@@ -10,20 +10,24 @@ export const getHistory = () =>
 export const getFavorite = () => 
   getLsItem("favorite") ? JSON.parse(getLsItem("favorite")) : [];
 
-export const setFavorite = (setFavoriteState,id) => {
-  let favorite = getFavorite();
-  if (favorite.indexOf(id) ==-1){
-    let tempArray = JSON.stringify(Array.from(new Set([...favorite, id])));
-    setLsItem("favorite", tempArray);
-    setFavoriteState(tempArray);
+export const getAchieve = () => 
+  getLsItem("achieve") ? JSON.parse(getLsItem("achieve")) : [];
+
+export const setRecord = (target,setState,id) => {
+  const getList =  target=='favorite' ?  getFavorite():getAchieve();
+  if (getList.indexOf(id) ==-1){
+    let tempArray = JSON.stringify(Array.from(new Set([...getList, id])));
+    setLsItem(target, tempArray);
+    setState(tempArray);
   }else{
-    let tempArray = JSON.stringify(favorite.filter(item => item !== id));
-    setLsItem("favorite", tempArray);
-    setFavoriteState(tempArray);
+    let tempArray = JSON.stringify(getList.filter(item => item !== id));
+    setLsItem(target, tempArray);
+    setState(tempArray);
   }
 };
 export const setHistory = (id) => {
   let history = getLsItem("history") ? JSON.parse(getLsItem("history")) : [];
   setLsItem("history", JSON.stringify(Array.from(new Set([...history, id]))));
 };
+
 

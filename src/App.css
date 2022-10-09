@@ -4,7 +4,7 @@
 }
 
 html {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
 }
 
@@ -180,7 +180,10 @@ section.message-list {
   margin-bottom: 20px;
 }
 
-
+.detail a {
+  margin: 20px;
+  display:inline-block;
+}
 
 .back-btn {
   margin-top: 1rem;

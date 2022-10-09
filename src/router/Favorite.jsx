@@ -23,6 +23,7 @@ export default function Favorite() {
     return (
         <>
             <h2>我的最愛</h2>
+            <h3>已加入最愛：{favoriteList.length} 個</h3>
             <ul className="info-list">
                 {favoriteList.map(item => {
                     return <InfoItem info={item} key={item.Id}/>
