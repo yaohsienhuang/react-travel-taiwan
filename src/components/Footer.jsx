@@ -5,7 +5,7 @@ export default function Footer() {
                 <div className="footer-content">
                     <p>愛高雄、遊高雄 with Sean
                     </p>
-                    <a target={"_blank"} href={"https://nostalgic-css.github.io/NES.css/"}>
+                    <a target={"_blank"} href={"https://github.com/yaohsienhuang/travel_kaohsiung_react"}>
                         <i className="nes-icon github"></i>
                     </a>
                 </div>
