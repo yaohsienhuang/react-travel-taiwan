@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/travel_kaohsiung_react/static/css/main.d93f4f45.css",
-    "main.js": "/travel_kaohsiung_react/static/js/main.82edd98f.js",
+    "main.css": "/travel_kaohsiung_react/static/css/main.8dedd1a0.css",
+    "main.js": "/travel_kaohsiung_react/static/js/main.da152aca.js",
     "static/js/787.493d8b0c.chunk.js": "/travel_kaohsiung_react/static/js/787.493d8b0c.chunk.js",
     "static/media/bg.jpg": "/travel_kaohsiung_react/static/media/bg.7db2f9aaad18e3e98172.jpg",
     "static/media/zpix.woff2": "/travel_kaohsiung_react/static/media/zpix.79cae3fea1d930213cb3.woff2",
     "index.html": "/travel_kaohsiung_react/index.html",
-    "main.d93f4f45.css.map": "/travel_kaohsiung_react/static/css/main.d93f4f45.css.map",
-    "main.82edd98f.js.map": "/travel_kaohsiung_react/static/js/main.82edd98f.js.map",
+    "main.8dedd1a0.css.map": "/travel_kaohsiung_react/static/css/main.8dedd1a0.css.map",
+    "main.da152aca.js.map": "/travel_kaohsiung_react/static/js/main.da152aca.js.map",
     "787.493d8b0c.chunk.js.map": "/travel_kaohsiung_react/static/js/787.493d8b0c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d93f4f45.css",
-    "static/js/main.82edd98f.js"
+    "static/css/main.8dedd1a0.css",
+    "static/js/main.da152aca.js"
   ]
 }
