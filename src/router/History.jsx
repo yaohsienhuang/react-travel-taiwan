@@ -4,7 +4,7 @@ import InfoItem from "../components/InfoItem";
 
 
 export default function History() {
-    const [infoItems, setInfoItems] = useState(JSON.parse(getLsItem('infos')));
+    const [infoItems] = useState(JSON.parse(getLsItem('infos')));
     let history = getHistory();
 
     let historyList = [];

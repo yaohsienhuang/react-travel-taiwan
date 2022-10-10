@@ -4,7 +4,7 @@ export default function Home() {
     return (
         <>
             <section className="nes-container">
-                <img style={{ maxWidth: "100%", height: "auto" }} src={bg} />
+                <img style={{ maxWidth: "100%", height: "auto" }} src={bg} alt="kaohsiung_image"/>
             </section>
             <section className="nes-container">
 

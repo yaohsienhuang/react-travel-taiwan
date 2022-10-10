@@ -16,7 +16,6 @@ export default function Favorite() {
 
     let achieveRatio=(achieveList.length*100/infoItems.length).toFixed(1)
     
-
     useEffect(() => {
         window.scrollTo({
             top: 0

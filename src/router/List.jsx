@@ -14,7 +14,7 @@ export default function List() {
     const [scrollV, setScrollV] = useState(0);
     const [infoItems, setInfoItems] = useState([]);
     const [filter, setFilter] = useState(condition);
-    const [zipCodeList, setZipCodeList] = useState(zipCode);
+    const [zipCodeList] = useState(zipCode);
 
     const currentInfoItems = () => {
         if (filter === 'selectAll')

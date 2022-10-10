@@ -4,7 +4,7 @@ import InfoItem from "../components/InfoItem";
 
 
 export default function Favorite() {
-    const [infoItems, setInfoItems] = useState(JSON.parse(getLsItem('infos')));
+    const [infoItems] = useState(JSON.parse(getLsItem('infos')));
     let favorite = getFavorite();
 
     let favoriteList = [];
