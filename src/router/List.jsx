@@ -14,13 +14,23 @@ export default function List() {
     const [scrollV, setScrollV] = useState(0);
     const [infoItems, setInfoItems] = useState([]);
     const [filter, setFilter] = useState(condition);
+    const [search, setSearch] = useState('');
     const [zipCodeList] = useState(zipCode);
 
     const currentInfoItems = () => {
-        if (filter === 'selectAll')
-            return infoItems;
-        else
-            return infoItems.filter(item => item.Zipcode === filter);
+        if (filter === 'selectAll'){
+            if (!search){
+                return infoItems
+            } else{
+                return infoItems.filter(item => item.Name.includes(search));
+            }
+        }else{
+            if (!search){
+                return infoItems.filter(item => item.Zipcode === filter);
+            } else{
+                return infoItems.filter(item => (item.Zipcode === filter) && (item.Name.includes(search)));
+            }
+        }
     }
 
     const getApiData = () => {
@@ -58,6 +68,11 @@ export default function List() {
                                 return <option key={zip} value={zip} >{name}</option>
                             })}
                         </select>
+                    </div>
+                </div>
+                <div className="info-filter-search">
+                    <div className="nes-field">
+                        <input type="text" id="name_field" class="nes-input" placeholder="Search title" onChange={(e) => setSearch(e.target.value)}></input>
                     </div>
                 </div>
             </section>

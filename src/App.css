@@ -94,11 +94,19 @@ section.message-list {
 }
 .info-filter {
   margin-bottom: 15px;
+  width: calc(100%);
+  display:inline-flex;
 }
 .info-filter-select {
   background-color: #212529;
   padding: 1rem 1.2rem 1rem 1rem;
-  width: calc(100% + 8px);
+  width: calc(50%);
+}
+
+.info-filter-search {
+  background-color: #212529;
+  padding: 1rem 1.2rem 1rem 1rem;
+  width: calc(50%);
 }
 
 .info-filter-select label {
